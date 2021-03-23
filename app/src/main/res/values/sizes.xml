@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IMAGE MAIN -->
+    <dimen name="size_btn_image">35dp</dimen>
+    <dimen name="size_margin_image">20dp</dimen>
+    <dimen name="size_image_height">300dp</dimen>
+
+
+    <!-- CENTER TEXT SCREEN -->
+    <dimen name="size_max_width_txt">180dp</dimen>
+    <dimen name="size_padding_right">20dp</dimen>
+
+    <!-- DEFAULT TEXTS -->
+    <dimen name="title_text_default">20sp</dimen>
+</resources>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ApplicationMFY</string>
+
+    <!-- IMAGE -->
     <string name="icon_back_image"> &#x3c;</string>
+
+    <!-- CENTER TEXT -->
+    <string name="title_text_of_center">THE BEST MENINO LENNON, POR SINAL!</string>
 </resources>
