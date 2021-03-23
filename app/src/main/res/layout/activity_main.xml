@@ -16,7 +16,7 @@
         layout="@layout/center_text"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lista_items"
+        android:id="@+id/rv_list_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/include_text_center"
