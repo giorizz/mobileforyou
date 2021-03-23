@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include_image_top_list"
+        layout="@layout/image_screen" />
+
+    <include
+        android:id="@+id/include_text_center"
+        layout="@layout/center_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include_text_center"
+        android:background="#AE0E0E" />
+
+</RelativeLayout>
