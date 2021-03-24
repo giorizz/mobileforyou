@@ -20,23 +20,24 @@ class MainActivity : AppCompatActivity() {
 
         heartButton()
 
-        fun getMovieData(callback: (List<Movies>) -> Unit){
-            val apiService = MoviesApiService.getInstance().create(MovieApiInterface::class.java)
-            apiService.getMovieList().enqueue(object : Callback<MovieResponse>{
-                override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
 
-                }
+    }
 
-                override fun onResponse(
-                    call: Call<MovieResponse>,
-                    response: Response<MovieResponse>
-                ) {
-                    return callback(response.body()!!.movies)
-                }
+    fun getMovieData(callback: (List<Movies>) -> Unit){
+        val apiService = MoviesApiService.getInstance().create(MovieApiInterface::class.java)
+        apiService.getMovieList().enqueue(object : Callback<MovieResponse>{
+            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
 
-            })
-        }
+            }
 
+            override fun onResponse(
+                call: Call<MovieResponse>,
+                response: Response<MovieResponse>
+            ) {
+                return callback(response.body()!!.movies)
+            }
+
+        })
     }
 
     fun heartButton(){

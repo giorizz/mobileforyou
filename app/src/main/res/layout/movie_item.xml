@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="20dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_item_movies"
+        android:layout_width="@dimen/size_image_item_width"
+        android:layout_height="@dimen/size_image_item_height"
+        android:background="@drawable/ic_launcher_background"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_left_text_image"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/title_item_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nomedofilmeaqui"
+        android:textAllCaps="true"
+        />
+    <TextView
+        android:id="@+id/subtitle_item_movies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1997, comedia e muito humor no meio do caminho"
+        android:textAllCaps="true"
+        android:maxLines="1"
+        />
+    </LinearLayout>
+
+</LinearLayout>

@@ -12,9 +12,12 @@ data class Movies(
     @SerializedName("title")
     val title: String ?,
 
+//    @SerializedName("title")
+//    val subtitle: String ?,
+
     @SerializedName("poster_path")
     var poster: String ?
 
 ) : Parcelable{
-    constructor() : this("", "", "")
+    constructor() : this("id", "title", "poster_path")
 }
