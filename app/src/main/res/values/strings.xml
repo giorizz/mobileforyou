@@ -5,7 +5,9 @@
     <string name="icon_back_image"> &#x3c;</string>
 
     <!-- CENTER TEXT -->
-    <string name="title_text_of_center">THE BEST MENINO LENNON, POR SINAL!</string>
+    <string name="title_text_of_center">THE VERY BEST OF JOHNNI DEPP</string>
+    <string name="txt_watched">0 Ouvintes</string>
+    <string name="txt_vote_count">0 Curtidas</string>
 
     <!-- ITEM MOVIE -->
     <string name="title_movie_item">Nome indisponível</string>

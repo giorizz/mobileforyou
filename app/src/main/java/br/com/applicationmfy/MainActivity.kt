@@ -1,6 +1,7 @@
 package br.com.applicationmfy
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.applicationmfy.models.MovieResponse
@@ -8,6 +9,7 @@ import br.com.applicationmfy.models.Movies
 import br.com.applicationmfy.services.MovieApiInterface
 import br.com.applicationmfy.services.MoviesApiService
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.image_screen.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,16 +21,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val msg_tst = "Belo clique no btnzinho :)"
+        btn_back_screen.setOnClickListener {
+            Toast.makeText(this, msg_tst, Toast.LENGTH_LONG).show()
+        }
+
         heartButton()
 
         rv_list_main.layoutManager = LinearLayoutManager(this)
         rv_list_main.setHasFixedSize(true)
-        getMovieData { movies : List<Movies> -> rv_list_main.adapter = MovieAdapter(movies) }
+        getMovieData { movies: List<Movies> -> rv_list_main.adapter = MovieAdapter(movies) }
     }
 
-    fun getMovieData(callback: (List<Movies>) -> Unit){
+    fun getMovieData(callback: (List<Movies>) -> Unit) {
         val apiService = MoviesApiService.getInstance().create(MovieApiInterface::class.java)
-        apiService.getMovieList().enqueue(object : Callback<MovieResponse>{
+        apiService.getMovieList().enqueue(object : Callback<MovieResponse> {
             override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
             }
 
@@ -42,15 +49,12 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    fun heartButton(){
+    fun heartButton() {
         val imageView = findViewById<SmallBangView>(R.id.imageViewAnimation)
         imageView.setOnClickListener {
             if (imageView.isSelected) {
                 imageView.isSelected = false
-//                imageView.likeAnimation()
             } else {
-                // if not selected only
-                // then show animation.
                 imageView.isSelected = true
                 imageView.likeAnimation()
             }

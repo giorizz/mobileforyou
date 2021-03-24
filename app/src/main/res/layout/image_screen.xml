@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -9,15 +8,15 @@
         android:id="@+id/image_album"
         android:layout_width="match_parent"
         android:layout_height="@dimen/size_image_height"
-        android:background="@drawable/image1"/>
+        android:background="@drawable/image1" />
 
     <Button
         android:id="@+id/btn_back_screen"
-        android:layout_margin="@dimen/size_margin_image"
         android:layout_width="@dimen/size_btn_image"
         android:layout_height="@dimen/size_btn_image"
+        android:layout_margin="@dimen/size_margin_image"
         android:background="@drawable/rounded_corners"
-        android:textColor="@color/white"
-        android:text="@string/icon_back_image"/>
+        android:text="@string/icon_back_image"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

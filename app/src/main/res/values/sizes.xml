@@ -12,9 +12,14 @@
     <dimen name="size_image_item_width">80dp</dimen>
     <dimen name="size_image_item_height">110dp</dimen>
     <dimen name="padding_left_text_image">10dp</dimen>
+    <dimen name="padding_left_padding_imagev">15dp</dimen>
+
 
     <!-- DEFAULT TEXTS -->
     <dimen name="title_text_default">20sp</dimen>
+
+    <!-- DEFAULT SIZES -->
+    <dimen name="size_icons">20dp</dimen>
 
 
 </resources>

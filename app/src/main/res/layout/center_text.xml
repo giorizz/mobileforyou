@@ -19,7 +19,7 @@
             android:layout_below="@+id/image_album"
             android:layout_weight="1"
             android:maxLines="2"
-            android:paddingLeft="20dp"
+            android:paddingLeft="@dimen/size_padding_right"
             android:text="@string/title_text_of_center"
             android:textColor="@color/white"
             android:textSize="@dimen/title_text_default" />
@@ -31,11 +31,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="20dp">
+        android:paddingLeft="@dimen/size_padding_right">
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/size_icons"
+            android:layout_height="@dimen/size_icons"
             android:src="@drawable/ic_heart_red" />
 
         <TextView
@@ -43,21 +43,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:text="0 Curtidas"
+            android:paddingLeft="@dimen/padding_left_text_image"
+            android:text="@string/txt_vote_count"
             android:textColor="@color/white" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/size_icons"
+            android:layout_height="@dimen/size_icons"
             android:src="@drawable/ic_baseline_hearing_24" />
+
         <TextView
             android:id="@+id/watched"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
             android:layout_weight="1"
-            android:text="0 Ouvintes"
+            android:paddingLeft="@dimen/padding_left_text_image"
+            android:text="@string/txt_watched"
             android:textColor="@color/white" />
     </LinearLayout>
 
