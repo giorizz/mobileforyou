@@ -6,7 +6,6 @@
     <dimen name="size_image_height">300dp</dimen>
 
     <!-- CENTER TEXT SCREEN -->
-    <dimen name="size_max_width_txt">180dp</dimen>
     <dimen name="size_padding_right">20dp</dimen>
 
     <!-- MOVIE ITEM -->

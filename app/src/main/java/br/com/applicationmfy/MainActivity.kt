@@ -2,11 +2,14 @@ package br.com.applicationmfy
 
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.applicationmfy.models.MovieResponse
 import br.com.applicationmfy.models.Movies
 import br.com.applicationmfy.services.MovieApiInterface
 import br.com.applicationmfy.services.MoviesApiService
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         heartButton()
+
+        rv_list_main.layoutManager = LinearLayoutManager(this)
+        rv_list_main.setHasFixedSize(true)
+        getMovieData { movies : List<Movies> -> rv_list_main.adapter = MovieAdapter(movies) }
 
 
     }

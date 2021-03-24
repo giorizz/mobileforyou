@@ -6,4 +6,8 @@
 
     <!-- CENTER TEXT -->
     <string name="title_text_of_center">THE BEST MENINO LENNON, POR SINAL!</string>
+
+    <!-- ITEM MOVIE -->
+    <string name="title_movie_item">Nome indisponível</string>
+    <string name="info_movie_item">Ano e informações indisponíveis</string>
 </resources>

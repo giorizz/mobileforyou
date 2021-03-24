@@ -1,5 +1,6 @@
 package br.com.applicationmfy
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ class MovieAdapter(
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
         fun bindMovie(movies: Movies) {
             itemView.title_item_movies.text = movies.title
+            itemView.subtitle_item_movies.text = "${movies.date}"
             Glide.with(itemView).load(IMAGE_BASE + movies.poster).into(itemView.image_item_movies)
         }
     }
