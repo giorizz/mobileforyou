@@ -1,6 +1,5 @@
 package br.com.applicationmfy
 
-import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

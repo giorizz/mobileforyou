@@ -1,8 +1,6 @@
 package br.com.applicationmfy
 
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.applicationmfy.models.MovieResponse
@@ -26,15 +24,12 @@ class MainActivity : AppCompatActivity() {
         rv_list_main.layoutManager = LinearLayoutManager(this)
         rv_list_main.setHasFixedSize(true)
         getMovieData { movies : List<Movies> -> rv_list_main.adapter = MovieAdapter(movies) }
-
-
     }
 
     fun getMovieData(callback: (List<Movies>) -> Unit){
         val apiService = MoviesApiService.getInstance().create(MovieApiInterface::class.java)
         apiService.getMovieList().enqueue(object : Callback<MovieResponse>{
             override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
-
             }
 
             override fun onResponse(

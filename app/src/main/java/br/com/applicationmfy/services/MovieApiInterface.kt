@@ -8,3 +8,4 @@ interface MovieApiInterface {
     @GET( "/3/movie/504/similar?api_key=b5563738d8dee19c975e11bcfb11ba38")
     fun getMovieList() : Call<MovieResponse>
 }
+
